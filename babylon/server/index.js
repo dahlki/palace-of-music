@@ -6,7 +6,7 @@ const chalk = require('chalk')
 const db = require('./models')
 const Composer = require('./models/composer-model')
 const User = require('./models/user-model')
-
+const PORT = process.env.PORT || 3000;
 
 module.exports = app
 
@@ -21,7 +21,7 @@ app.use(express.static(path.resolve(__dirname, '..', 'client')));
 app.use((req, res, next) => {
 
     // website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'https://the-palace-of-music.herokuapp.com/');
 
     // request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
@@ -57,7 +57,7 @@ app.get('*', function (request, response){
 })
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('listening on *:3000');
   db.sync()
   .then(function(){
