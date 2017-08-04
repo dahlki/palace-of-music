@@ -10,7 +10,7 @@
     "build": "webpack",
     "build-dev": "npm run build -- --watch",
     "seed": "node babylon/server/seed.js",
-    "start": "node babylon/server/index.js"
+    "start": "node seed & node babylon/server/index.js"
   },
   "keywords": [],
   "author": "",
