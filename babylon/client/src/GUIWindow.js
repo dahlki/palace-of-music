@@ -103,7 +103,6 @@
 					console.log(this)
 			};
 		}
-		console.log(close)
 		console.log(this)
 
 		var contentWindow = document.createElement("div");
@@ -121,7 +120,7 @@
 
 		this.html.appendChild(window);
 		this.getElementById(this.id).appendChild(titreWindow);
-		console.log(close)
+    
 		if(this.buttonClose == true || this.buttonClose == "undefined") {
 			console.log('true')
 			this.getElementById(this.id+"_titre").appendChild(close);
