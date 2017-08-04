@@ -58,7 +58,7 @@ app.get('*', function (request, response){
 
 
 app.listen(PORT, () => {
-  console.log('listening on *:3000');
+  console.log(`listening on ${PORT}`);
   db.sync()
   .then(function(){
     console.log('database is synced!')
