@@ -7068,8 +7068,8 @@ var loadScene = exports.loadScene = function loadScene(name, incremental, sceneL
         //create custom rotation for camera
         var FreeCameraKeyboardRotateInput = function FreeCameraKeyboardRotateInput() {
           this._keys = [];
-          this.keysLeft = [82];
-          this.keysRight = [69];
+          this.keysLeft = [69];
+          this.keysRight = [81];
           this.sensibility = 0.0015;
         };
 
