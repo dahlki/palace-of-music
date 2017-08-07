@@ -19,7 +19,7 @@ var authOptions = {
   json: true
 };
 
-router.use('/:name', (req, res, next) => {
+router.get('/:name', (req, res, next) => {
   const artist = req.params.name;
   console.log('spotify router', artist);
   request.post(authOptions, (error, response, body) => {
