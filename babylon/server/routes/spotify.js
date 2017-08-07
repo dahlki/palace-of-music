@@ -19,7 +19,7 @@ var authOptions = {
   json: true
 };
 
-router.get('/:name', (req, res, next) => {
+router.use('/:name', (req, res, next) => {
   const artist = req.params.name;
 
   request.post(authOptions, (error, response, body) => {
