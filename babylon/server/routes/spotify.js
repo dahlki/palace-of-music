@@ -23,7 +23,9 @@ router.get('/:name', (req, res, next) => {
   const artist = req.params.name;
   console.log('spotify router', artist);
   request.post(authOptions, (error, response, body) => {
-
+    console.log('error', error);
+    console.log('response', response);
+    console.log('body', body);
     if (!error && response.statusCode === 200) {
       console.log('spotify if');
       const token = body.access_token; // use the access token to access the spotify web API
