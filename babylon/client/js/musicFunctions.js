@@ -27,7 +27,10 @@ let spotifyOptions = ' width="500" height="350" frameborder="0" allowtransparenc
 
 const getArtistURI = (name) => {
   return axios.get(`/spotify/${name}`)
-  .then(artist => artist.data.uri)
+  .then(artist => {
+    console.log(artist);
+    return artist.data.uri
+  })
 }
 
 const appendSpotify = (id, uri) => {
