@@ -6,11 +6,13 @@
   "engines" : { "node" : "7.4.0" },
   "scripts": {
     "test": "mocha --watch babylon/server/test.js",
-    "start-dev": "export NODE_ENV=development; npm run build-dev & nodemon babylon/server/index.js server",
+    "start": "node babylon/server/index.js",
     "build": "webpack",
-    "build-dev": "npm run build -- --watch",
+    "start-server": "nodemon babylon/server",
+    "build-dev": "webpack -w",
+    "start-dev": "npm run build-dev & NODE_ENV=development npm run start-server",
     "seed": "node babylon/server/seed.js",
-    "start": "node babylon/server/index.js"
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
