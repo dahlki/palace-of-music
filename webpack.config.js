@@ -1,4 +1,5 @@
 var path = require('path');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   entry: './babylon/client/js/loader.js',
@@ -20,6 +21,9 @@ module.exports = {
         presets: ['react', 'es2015']
       }
     }]
-  }
+  },
+  plugins: [
+    new LiveReloadPlugin({appendScriptTag: true, protocol: 'https'})
+  ]
 };
 
