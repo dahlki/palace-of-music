@@ -11,7 +11,8 @@
     "start-server": "nodemon babylon/server",
     "build-dev": "webpack -w",
     "start-dev": "npm run build-dev & NODE_ENV=development npm run start-server",
-    "seed": "node babylon/server/seed.js"
+    "seed": "node babylon/server/seed.js",
+    "postinstall": "webpack"
   },
   "keywords": [],
   "author": "",
