@@ -21,10 +21,11 @@ var authOptions = {
 
 router.use('/:name', (req, res, next) => {
   const artist = req.params.name;
-
+  console.log('spotify router', artist);
   request.post(authOptions, (error, response, body) => {
 
     if (!error && response.statusCode === 200) {
+      console.log('spotify if');
       const token = body.access_token; // use the access token to access the spotify web API
       const options = {
         url: `https://api.spotify.com/v1/search?q=${artist}&type=artist`,
@@ -36,6 +37,7 @@ router.use('/:name', (req, res, next) => {
 
       request.getAsync(options)
       .then((response) => {
+        console.log('spotify request', response);
         const artistData = response.body.artists.items[0];
         res.send(artistData);
       })
