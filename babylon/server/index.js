@@ -21,7 +21,7 @@ app.use(express.static(path.resolve(__dirname, '..', 'client')));
 app.use((req, res, next) => {
 
     // website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://the-palace-of-music.herokuapp.com/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://the-palace-of-music.herokuapp.com');
 
     // request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
