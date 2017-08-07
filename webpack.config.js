@@ -23,7 +23,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new LiveReloadPlugin({appendScriptTag: true, protocol: "https"})
+    new LiveReloadPlugin({appendScriptTag: true, protocol: 'https'})
   ]
 };
 
