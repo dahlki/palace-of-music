@@ -7,7 +7,7 @@ Promise.promisifyAll(request);
 const spotify = process.env.NODE_ENV === "development"
   ? require('../../../config')
   : {client_id: process.env.CLIENT_ID, client_secret: process.env.CLIENT_SECRET }
-
+console.log('spotify ::::::::::::::::::::::::::::::::', spotify)
 var authOptions = {
   url: 'https://accounts.spotify.com/api/token',
   headers: {
