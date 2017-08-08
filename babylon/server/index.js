@@ -24,10 +24,10 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://the-palace-of-music.herokuapp.com/');
 
     // request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
 
     // request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'Authorization');
+    res.setHeader('Access-Control-Allow-Headers', 'Authorization, Accept, Origin, Content-Type');
 
     next();
 });
