@@ -16,7 +16,8 @@ var authOptions = {
   form: {
     grant_type: 'client_credentials'
   },
-  json: true
+  json: true,
+  'Content-Type': 'application/x-www-form-urlencoded'
 };
 
 router.get('/:name', (req, res, next) => {
