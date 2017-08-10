@@ -11,7 +11,7 @@ console.log('spotify ::::::::::::::::::::::::::::::::', spotify)
 var authOptions = {
   url: 'https://accounts.spotify.com/api/token',
   headers: {
-    'Authorization': 'Basic ' + (new Buffer(spotify.client_id + ':' + spotify.client_secret).toString('base64'))
+    'Authorization': 'Basic ' + (new Buffer(spotify.client_id + ':' + spotify.client_secret).toString('base64')) + '='
   },
   form: {
     grant_type: 'client_credentials'
