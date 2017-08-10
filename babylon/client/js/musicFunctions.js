@@ -26,10 +26,8 @@ let spotifyURL = '<iframe src="https://embed.spotify.com/?uri='
 let spotifyOptions = ' width="500" height="350" frameborder="0" allowtransparency="true"></iframe>'
 
 const getArtistURI = (name) => {
-  console.log('composerName', name);
   return axios.get(`/spotify/${name}`)
   .then(artist => {
-    console.log(artist);
     return artist.data.uri
   })
 }
