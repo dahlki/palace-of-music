@@ -19,7 +19,7 @@ app.use(express.static(path.resolve(__dirname, '..', 'client')));
 
 // add headers
 app.use((req, res, next) => {
-    console.log('app.use');
+
     // website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'https://the-palace-of-music.herokuapp.com');
 
